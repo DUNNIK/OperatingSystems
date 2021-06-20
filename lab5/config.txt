@@ -1,0 +1,5 @@
+MemTotal:        2804792 kB
+SwapTotal:        839676 kB
+PageSize:            4096 B
+MemFree:         2640284 kB
+SwapFree:         739676 kB

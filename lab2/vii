@@ -1,0 +1,40 @@
+#!/bin/bash
+
+>b
+>a
+pid_com_all=$(ps -Ao pid,command | tail -n +2 | awk ' { print $1":"$2 } ')
+
+for p in $pid_com_all
+do
+	pid=$(echo $p | awk -F ":" '{print $1}')
+	command=$(echo $p | awk -F ":" '{print $2}')
+	echo "$pid $command $(cat /proc/$pid/io 2>/dev/null | grep "read_bytes" | awk '{print $2}')" >> b
+done
+
+sleep 10s
+
+for p in $pid_com_all
+do
+	pid=$(echo $p | awk -F ":" '{print $1}')
+	command=$(echo $p | awk -F ":" '{print $2}')
+	echo "$pid $command $(cat /proc/$pid/io 2>/dev/null | grep "read_bytes" | awk '{print $2}')" >> a
+done
+
+>tmp
+while read line
+do 
+	pid_tmp=$( echo $line | awk '{print $1}' )
+	a_data=$(echo $line | awk '{print $3}')
+	command=$(echo $line | awk '{print $2}')
+	#b_data=$(cat b | grep -E "$pid_tmp" | awk '{print $3}')
+	b_data=$(cat b | awk -v id="$pid_tmp" '{if ($1 == id) print $3}')
+	if [[ -z $b_data ]]
+	then
+		continue
+	fi
+	diff=$(echo "$a_data-$b_data" | bc )
+	echo "$pid_tmp:$command:$diff" >> tmp
+done < a
+
+cat tmp | sort -t ":" -nrk3 | head -3
+rm tmp b a

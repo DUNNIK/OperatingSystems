@@ -1,0 +1,57 @@
+#!/bin/bash
+
+if [[ "$#" -ne 1 ]]
+then
+	echo "Wrong number of arguements!"
+	exit
+fi
+
+if [[ ! -d "$HOME/.trash" ]]
+then
+	echo "Dir of trash does not exist!"
+	exit
+fi
+
+if [[ ! -e "$HOME/.trash.log" ]]
+then
+	echo "File 'trash.log' does not exist!"
+	exit
+fi
+
+if [[ -z $(grep -E "/$1 " "$HOME/.trash.log") ]]
+then
+	echo "Incorrect file name!"
+	exit
+fi
+
+while read -r line
+do
+	filePath=$(echo "$line" | awk '{print $1}')
+	fileRef=$(echo "$line" | awk '{print $2}')
+	read -p "Do with '$filePath'? (Y/N)" ans <&1
+	if [[ "$ans" == "Y" || "$ans" == "y" || "$ans" == "Yes" || "$ans" == "yes" ]]
+	then
+		break
+	fi
+done < <(grep -E "/$1 " "$HOME/.trash.log")
+
+if [[ ! -e "$fileRef" ]]
+then
+	echo "File was deleted from trash!"
+	exit
+fi
+
+fileResDir=$(echo "$filePath" | awk -F "/$1" '{print $1}')
+if [[ ! -d "$fileResDir" ]]
+then
+	echo "Dir '$fileResDir' does not exist! File will be restored in '$HOME'."
+	fileResDir="$HOME"
+fi
+
+fileName="$1"
+while [[ -f "$fileResDir/$fileName" ]]
+do
+	read -p "File '$fileName' exist! Please type new name: " fileName<&1
+done
+ln "$fileRef" "$fileResDir/$fileName"
+rm "$fileRef"

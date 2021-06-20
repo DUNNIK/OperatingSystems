@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ps -U user | wc -l > FileI
+ps -U user | awk '{print $1 ":" $4}' >> FileI
+cat FileI

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+path="/home/user/lab3"
+
+mkdir $path/test 2>dev>null && {
+echo "catalog was created successfully" > $path/report
+name=$(date -r $path/test +"%F|%T")
+> $path/test/"$name"
+}
+ping www.net_nikogo.ru 2>dev>null || echo "$(date +"%F|%T")" host is unreachable >> $path/report

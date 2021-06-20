@@ -1,0 +1,19 @@
+Time
+0:00.53 MiB Mem :   2739.1 total,   2480.2 free,    144.6 used,    114.2 buff/cache
+0:01.58 MiB Mem :   2739.1 total,   2338.5 free,    286.2 used,    114.3 buff/cache
+0:02.60 MiB Mem :   2739.1 total,   2186.4 free,    438.3 used,    114.3 buff/cache
+0:03.62 MiB Mem :   2739.1 total,   2040.3 free,    584.4 used,    114.4 buff/cache
+0:04.64 MiB Mem :   2739.1 total,   1891.9 free,    732.8 used,    114.4 buff/cache
+0:05.67 MiB Mem :   2739.1 total,   1742.7 free,    882.0 used,    114.4 buff/cache
+0:06.68 MiB Mem :   2739.1 total,   1594.4 free,   1030.3 used,    114.4 buff/cache
+0:07.69 MiB Mem :   2739.1 total,   1446.2 free,   1178.5 used,    114.4 buff/cache
+0:08.70 MiB Mem :   2739.1 total,   1294.0 free,   1330.7 used,    114.4 buff/cache
+0:09.70 MiB Mem :   2739.1 total,   1151.4 free,   1473.3 used,    114.4 buff/cache
+0:10.73 MiB Mem :   2739.1 total,   1007.4 free,   1617.3 used,    114.4 buff/cache
+0:11.75 MiB Mem :   2739.1 total,    861.3 free,   1763.4 used,    114.4 buff/cache
+0:12.79 MiB Mem :   2739.1 total,    713.4 free,   1911.3 used,    114.4 buff/cache
+0:13.81 MiB Mem :   2739.1 total,    561.3 free,   2063.4 used,    114.4 buff/cache
+0:14.85 MiB Mem :   2739.1 total,    416.5 free,   2208.1 used,    114.4 buff/cache
+0:15.84 MiB Mem :   2739.1 total,    271.1 free,   2353.5 used,    114.4 buff/cache
+0:16.85 MiB Mem :   2739.1 total,    121.2 free,   2495.1 used,    122.8 buff/cache
+ MiB Mem :   2739.1 total,   1245.6 free,   1436.5 used,     56.9 buff/cache

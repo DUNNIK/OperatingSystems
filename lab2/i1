@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ps -U user | wc -l > FileI
+ps -U user -o pid,comm | sed 's/^ *//' | sed 's/ /:/' >> FileI
+cat FileI

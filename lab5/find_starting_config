@@ -1,0 +1,7 @@
+#!/bin/bash
+grep MemTotal /proc/meminfo > config.txt
+grep SwapTotal /proc/meminfo >> config.txt
+echo "PageSize:            $(getconf PAGE_SIZE) B" >> config.txt
+grep MemFree /proc/meminfo >> config.txt
+grep SwapFree /proc/meminfo >> config.txt
+

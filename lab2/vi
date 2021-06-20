@@ -1,0 +1,19 @@
+#!/bin/bash
+
+max="0"
+for pid in $(ps -Ao pid)
+do
+	if [[ -r /proc/$pid/status ]]
+	then
+		a="$(grep -i "VMRSS" /proc/$pid/status | awk '{print $2}')"
+		if [[ "$a" -ne "" ]]
+		then
+			if [[ "$a" -gt "$max" ]]
+			then
+				mpid=$pid
+				max=$a
+			fi
+		fi
+	fi
+done
+echo "WITHOUT_TOP:" $mpid" TOP:" $(top -b -n 1 -o %MEM | sed '1,7d' | head -n 1 | awk '{print $1}')

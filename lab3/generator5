@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while true;
+do
+	read line
+	if [[ $line == "QUIT" ]]
+	then
+		echo "Exit"
+		exit
+	fi
+	
+	echo "$line" > pipe
+
+	if [[ $line != "+" && $line != "*" && $line != [0-9]* ]]
+	then
+		echo "Error in generator"
+		exit
+	fi
+done

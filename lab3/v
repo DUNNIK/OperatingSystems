@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkfifo pipe
+./handler5&
+./generator5
+rm pipe

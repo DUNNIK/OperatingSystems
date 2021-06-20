@@ -1,0 +1,10 @@
+#!/bin/bash
+
+killall scriptIV
+
+./scriptIV &
+pid1=$!
+./scriptIV &
+./scriptIV &
+
+renice +10 -p $pid1

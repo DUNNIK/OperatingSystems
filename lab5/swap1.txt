@@ -1,0 +1,19 @@
+Time
+0:00.53 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   2460.5 avail Mem 
+0:01.58 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   2318.8 avail Mem 
+0:02.60 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   2166.8 avail Mem 
+0:03.62 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   2020.7 avail Mem 
+0:04.64 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1872.2 avail Mem 
+0:05.67 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1723.1 avail Mem 
+0:06.68 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1574.8 avail Mem 
+0:07.69 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1426.6 avail Mem 
+0:08.70 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1274.4 avail Mem 
+0:09.70 MiB Swap:    820.0 total,    723.7 free,     96.3 used.   1131.8 avail Mem 
+0:10.73 MiB Swap:    820.0 total,    723.7 free,     96.3 used.    987.8 avail Mem 
+0:11.75 MiB Swap:    820.0 total,    723.7 free,     96.3 used.    841.6 avail Mem 
+0:12.79 MiB Swap:    820.0 total,    723.7 free,     96.3 used.    693.8 avail Mem 
+0:13.81 MiB Swap:    820.0 total,    723.7 free,     96.3 used.    541.7 avail Mem 
+0:14.85 MiB Swap:    820.0 total,    723.7 free,     96.3 used.    396.9 avail Mem 
+0:15.84 MiB Swap:    820.0 total,    724.0 free,     96.0 used.    251.5 avail Mem 
+0:16.85 MiB Swap:    820.0 total,    724.2 free,     95.8 used.    105.8 avail Mem 
+ MiB Swap:    820.0 total,    371.4 free,    448.6 used.   1197.3 avail Mem 

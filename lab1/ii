@@ -1,0 +1,10 @@
+#!/bin/bash
+
+result=""
+read k
+while [ "$k" != "q" ]
+do
+result="$result$k"
+read k
+done
+echo All the Line: "$result"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ps -aux | awk '/\/sbin\//{print $2}' > FileII
+cat FileII

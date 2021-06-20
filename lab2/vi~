@@ -1,0 +1,17 @@
+#!/bin/bash
+
+max='0'
+for pid in $(ps uax | awk 'FNR > 1 { print $2 } ')
+do
+	a="$(grep -E -i -s -h "VmRSS" /proc/$pid/status | awk '{print $2}' )"
+	if [[ "$a" != "" ]]
+	then
+		if [[ "$a" > "$max" ]]
+		then
+			mpid=$pid
+			max=$a
+		fi
+	fi
+done
+echo $mpid
+#printf "WITHOUT_TOP: %s TOP: %s\n" $mpid $(top -o %MEM | awk '{print $2}')

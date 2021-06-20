@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./handler6&
+./generator6
